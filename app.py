@@ -21,29 +21,16 @@ def foo():
 
 @post('/Longest_Run')
 def submit():
-    COMMAND1 = request.forms.get('COMMAND1')
-    COMMAND2 = request.forms.get('COMMAND2')
-    COMMAND3 = request.forms.get('COMMAND3')
-    COMMAND4 = request.forms.get('COMMAND4')
-    COMMANDS = filter(lambda name: name!= '' , [COMMAND1, COMMAND2, COMMAND3, COMMAND4])
-    print COMMANDS
+    command_str = request.forms.get('COMMAND_LIST')
+    COMMANDS = command_str.replace('\r','').split('\n')
     for phrase in COMMANDS:
         sentence_logic.add_phrase('commands.txt', phrase)
-    ACTION1 = request.forms.get('ACTION1')
-    ACTION2 = request.forms.get('ACTION2')
-    ACTION3 = request.forms.get('ACTION3')
-    ACTION4 = request.forms.get('ACTION4')
-    ACTIONS = filter(lambda name: name!= '' , [ACTION1, ACTION2, ACTION3, ACTION4])
-    print ACTIONS
+    action_str = request.forms.get('ACTION_LIST')
+    ACTIONS = action_str.replace('\r','').split('\n')
     for phrase in ACTIONS:
         sentence_logic.add_phrase('actions.txt', phrase)
-    phrases = sentence_logic.test()
-    ADDRESS1 = request.forms.get('ADDRESS1')
-    ADDRESS2 = request.forms.get('ADDRESS2')
-    ADDRESS3 = request.forms.get('ADDRESS3')
-    ADDRESS4 = request.forms.get('ADDRESS4')
-    ADDRESSS = filter(lambda name: name!= '' , [ADDRESS1, ADDRESS2, ADDRESS3, ADDRESS4])
-    print ADDRESSS
+    address_str = request.forms.get('ADDRESS_LIST')
+    ADDRESSS = address_str.replace('\r','').split('\n')
     for phrase in ADDRESSS:
         sentence_logic.add_phrase('address.txt', phrase)
     phrases = sentence_logic.test()

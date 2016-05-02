@@ -14,28 +14,19 @@
              <p>Add 0-4 Commands ('Please', 'You should', etc.)</p>
              <p>Currently Used : {{commands}} </p>
              <div class="form-group" "col-md-2">
-               <input type="string" name="COMMAND1" class="form-control" placeholder="command">
-               <input type="string" name="COMMAND2" class="form-control" placeholder="command">
-               <input type="string" name="COMMAND3" class="form-control" placeholder="command">
-               <input type="string" name="COMMAND4" class="form-control" placeholder="command">
+               <textarea type="string" name="COMMAND_LIST" class="form-control" placeholder="command"></textarea>
              </div>
              <h3>Actions</h3>
              <p> Add 0-4 Actions ('run', 'recharge your battery')</p>
              <p>Currently Used : {{actions}} </p>
              <div class="form-group" "col-md-2">
-               <input type="string" name="ACTION1" class="form-control" placeholder="action">
-               <input type="string" name="ACTION2" class="form-control" placeholder="action">
-               <input type="string" name="ACTION3" class="form-control" placeholder="action">
-               <input type="string" name="ACTION4" class="form-control" placeholder="action">
+               <textarea type="string" name="ACTION_LIST" class="form-control" placeholder="action"></textarea>
              </div>
              <h3>Address</h3>
              <p> Add 0-4 Addresses ('earthing', 'human')</p>
              <p>Currently Used : {{address}} </p>
              <div class="form-group" "col-md-2">
-               <input type="string" name="ADDRESS1" class="form-control" placeholder="address">
-               <input type="string" name="ADDRESS2" class="form-control" placeholder="address">
-               <input type="string" name="ADDRESS3" class="form-control" placeholder="address">
-               <input type="string" name="ADDRESS4" class="form-control" placeholder="address">
+               <textarea type="string" name="ADDRESS_LIST" class="form-control" placeholder="address"></textarea>
              </div>
            </td>
          </tr>
