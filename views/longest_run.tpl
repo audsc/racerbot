@@ -11,7 +11,8 @@
        <table>
            <td>
              <h3>Commands</h3>
-             <p>Add 0-4 Commands ('Please', 'You should', etc.</p>
+             <p>Add 0-4 Commands ('Please', 'You should', etc.)</p>
+             <p>Currently Used : {{commands}} </p>
              <div class="form-group" "col-md-2">
                <input type="string" name="COMMAND1" class="form-control" placeholder="command">
                <input type="string" name="COMMAND2" class="form-control" placeholder="command">
@@ -20,6 +21,7 @@
              </div>
              <h3>Actions</h3>
              <p> Add 0-4 Actions ('run', 'recharge your battery')</p>
+             <p>Currently Used : {{actions}} </p>
              <div class="form-group" "col-md-2">
                <input type="string" name="ACTION1" class="form-control" placeholder="action">
                <input type="string" name="ACTION2" class="form-control" placeholder="action">
@@ -28,6 +30,7 @@
              </div>
              <h3>Address</h3>
              <p> Add 0-4 Addresses ('earthing', 'human')</p>
+             <p>Currently Used : {{address}} </p>
              <div class="form-group" "col-md-2">
                <input type="string" name="ADDRESS1" class="form-control" placeholder="address">
                <input type="string" name="ADDRESS2" class="form-control" placeholder="address">

@@ -16,7 +16,8 @@ def menu():
 @get('/Longest_Run')
 def foo():
     phrases = sentence_logic.test() 
-    return template('longest_run', title='bot for longest run', phrases=phrases)
+    p_dict = sentence_logic.get_p_dict()
+    return template('longest_run', title='bot for longest run', phrases=phrases, commands=p_dict['commands'], actions=p_dict['actions'], address=p_dict['address'])
 
 @post('/Longest_Run')
 def submit():
@@ -46,7 +47,18 @@ def submit():
     for phrase in ADDRESSS:
         sentence_logic.add_phrase('address.txt', phrase)
     phrases = sentence_logic.test()
-    return template('longest_run', title='bot for longest run', phrases=phrases)
+    p_dict = sentence_logic.get_p_dict()
+    return template('longest_run', title='bot for longest run', phrases=phrases, commands=p_dict['commands'], actions=p_dict['actions'], address=p_dict['address'])
+
+@get('/<name>/')
+@get('/<name>')
+def dynmaic(name):
+    return '<center><h1> Hello '+name+'</h1></center>'
+
+@get('/<num_float:float>') #return data for float
+@get('/<num_float:float>/')
+def dynamic_float(num_float):
+    return 'The floating point you have entered is: '+str(num_float)
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 8080))
