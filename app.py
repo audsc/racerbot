@@ -48,6 +48,6 @@ def dynamic_float(num_float):
     return 'The floating point you have entered is: '+str(num_float)
 
 if __name__ == '__main__':
-    port = int(argv[1])
-    #port = int(os.environ.get('PORT', 8080))
+    #port = int(argv[1])
+    port = int(os.environ.get('PORT', 8080))
     run(host='0.0.0.0', port=port, debug=True)
