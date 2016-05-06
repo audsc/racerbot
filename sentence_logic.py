@@ -33,6 +33,12 @@ def create_sentences(p_dict):
     print phrases
     return phrases
 
+def clear_phrases(p_type):
+    p_file = p_type + '.txt'
+    f = open(p_file, 'w')
+    f.write('')
+    f.close()
+    return 0
 #if __name__ == "__main__":
 #    #while(True):
 #    #    if int(raw_input("Would you like to continue (press 1 for continue)"))!=1:
