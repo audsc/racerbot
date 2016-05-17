@@ -54,12 +54,7 @@ def clear(name):
 @get('/<name>/')
 @get('/<name>')
 def dynmaic(name):
-    return '<center><h1> Hello '+name+'</h1></center>'
-
-@get('/<num_float:float>') #return data for float
-@get('/<num_float:float>/')
-def dynamic_float(num_float):
-    return 'The floating point you have entered is: '+str(num_float)
+    return '<center><h1> The page for '+name+' does not exist yet. </h1></center>'
 
 if __name__ == '__main__':
     #port = int(argv[1])
