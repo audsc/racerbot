@@ -1,6 +1,6 @@
 import os
 from bottle import Bottle, run, template, get, post, request, redirect
-import sentence_logic
+import db_sentence_logic as sentence_logic
 
 # keep phrases in sql database
 # load from sql database when page is loaded
