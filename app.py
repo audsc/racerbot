@@ -24,17 +24,21 @@ def foo():
 @post('/Longest_Run')
 def submit():
     command_str = request.forms.get('COMMAND_LIST')
+    print command_str
     COMMANDS = command_str.replace('\r','').split('\n')
     for phrase in COMMANDS:
-        sentence_logic.add_phrase('commands.txt', phrase)
+        print phrase
+        sentence_logic.add_phrase('command', phrase)
     action_str = request.forms.get('ACTION_LIST')
     ACTIONS = action_str.replace('\r','').split('\n')
     for phrase in ACTIONS:
-        sentence_logic.add_phrase('actions.txt', phrase)
+        print phrase
+        sentence_logic.add_phrase('action', phrase)
     address_str = request.forms.get('ADDRESS_LIST')
     ADDRESSS = address_str.replace('\r','').split('\n')
     for phrase in ADDRESSS:
-        sentence_logic.add_phrase('address.txt', phrase)
+        print phrase
+        sentence_logic.add_phrase('address', phrase)
     phrases = sentence_logic.test()
     p_dict = sentence_logic.get_p_dict()
     for key, value in p_dict.items():
