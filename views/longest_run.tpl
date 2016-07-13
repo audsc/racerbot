@@ -36,7 +36,15 @@
        </table>
        <button type="submit" class="btn btn-default">Submit</button>
      </form>
-<p>{{phrases}} </p>
+<h3> Sentences </h3>
+<p>
+    <table>
+        %for item in phrases:
+            {{item}}
+            <br/>
+        %end
+    </table>  
+</p>
 
 </body>
 </html>
