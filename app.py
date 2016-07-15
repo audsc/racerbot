@@ -17,8 +17,8 @@ def menu():
 def foo():
     phrases = sentence_logic.test() 
     p_dict = sentence_logic.get_p_dict()
-    for key, value in p_dict.items():
-        p_dict[key] = ', '.join(p_dict[key])
+    #for key, value in p_dict.items():
+    #    p_dict[key] = ', '.join(p_dict[key])
     return template('longest_run', title='bot for longest run', phrases=phrases, commands=p_dict['commands'], actions=p_dict['actions'], address=p_dict['address'])
 
 @post('/Longest_Run')
@@ -41,8 +41,8 @@ def submit():
         sentence_logic.add_phrase('address', phrase)
     phrases = sentence_logic.test()
     p_dict = sentence_logic.get_p_dict()
-    for key, value in p_dict.items():
-        p_dict[key] = ', '.join(p_dict[key])
+    #for key, value in p_dict.items():
+    #    p_dict[key] = ', '.join(p_dict[key])
     return template('longest_run', title='bot for longest run', phrases=phrases, commands=p_dict['commands'], actions=p_dict['actions'], address=p_dict['address'])
 
 @get('/Longest_Run/clear/<name>')

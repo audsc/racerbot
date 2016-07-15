@@ -12,21 +12,42 @@
            <td>
              <h3>Commands</h3>
              <p>Add 0+ commands each on a new line ('Please', 'You should', etc.)</p>
-             <p>Currently Used : {{commands}} </p>
+             <p>Currently Used :         
+                <table>
+                    %for item in commands:
+                        {{item}}
+                        <br/>
+                    %end
+                </table>  
+             </p>
              <div class="form-group" "col-md-2">
                <textarea type="string" name="COMMAND_LIST" class="form-control" placeholder="command"></textarea>
              </div>
              <a href="Longest_Run/clear/command"> Clear Commands </a>
              <h3>Actions</h3>
              <p> Add 0+ actions each on a new line ('run', 'recharge your battery')</p>
-             <p>Currently Used : {{actions}} </p>
+             <p>Currently Used :         
+                <table>
+                    %for item in actions:
+                        {{item}}
+                        <br/>
+                    %end
+                </table>  
+             </p>
              <div class="form-group" "col-md-2">
                <textarea type="string" name="ACTION_LIST" class="form-control" placeholder="action"></textarea>
              </div>
              <a href="Longest_Run/clear/action"> Clear actions </a>
              <h3>Address</h3>
              <p> Add 0+ addresses each on a new line ('earthing', 'human')</p>
-             <p>Currently Used : {{address}} </p>
+             <p>Currently Used :         
+                <table>
+                    %for item in address:
+                        {{item}}
+                        <br/>
+                    %end
+                </table>  
+             </p>
              <div class="form-group" "col-md-2">
                <textarea type="string" name="ADDRESS_LIST" class="form-control" placeholder="address"></textarea>
              </div>
