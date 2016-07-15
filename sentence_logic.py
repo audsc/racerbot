@@ -30,7 +30,7 @@ def create_sentences(p_dict):
             for j in range(len(p_dict['address'])):
                 phrase = phrase_start + ' ' +  p_dict['address'][j]
                 phrases.append(phrase)
-    print phrases
+    print "SENTENCES : " , phrases
     return phrases
 
 def clear_phrases(p_type):
@@ -65,3 +65,4 @@ def test():
         print key , " : " , value
     sentences = create_sentences(p_dict)
     return sentences
+

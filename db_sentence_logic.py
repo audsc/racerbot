@@ -9,9 +9,11 @@ def read_phrases(phrase_type):
     return p_list
 
 def add_phrase(phrase_type, p):
-    con = sqlite3.connect('sentences.db')
-    con.execute("INSERT INTO sentences (phrase, status) VALUES (?, ?)", (p, phrase_type))
-    con.commit()
+    if p:
+        con = sqlite3.connect('sentences.db')
+        con.execute("INSERT INTO sentences (phrase, status) VALUES (?, ?)", (p, phrase_type))
+        con.commit()
+    
 
 def get_p_dict():
     p_dict = {}
@@ -37,7 +39,7 @@ def clear_phrases(p_type):
     con = sqlite3.connect('sentences.db')
     con.execute("DELETE FROM sentences WHERE status=?", (p_type,))
     con.commit()
-
+    return 0
 
 def test():
     p_dict = get_p_dict()
